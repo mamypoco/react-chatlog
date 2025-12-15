@@ -35,7 +35,6 @@ const App = () => {
   const colorChoices = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
 
   const updateColorChoice = (color, person) => {
-    console.log(color, person);
     if (person === first) {
       setColorChoice1(color);
     } else if (person === second) {
