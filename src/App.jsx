@@ -1,6 +1,5 @@
 import './App.css';
 import { useState } from 'react';
-import ChatEntry from './components/ChatEntry';
 import initialMessageData from './data/messages.json';
 import ChatLog from './components/ChatLog';
 import ColorChoice from './components/ColorChoice';
@@ -10,7 +9,7 @@ const App = () => {
   const [colorChoice1, setColorChoice1] = useState(null);
   const [colorChoice2, setColorChoice2] = useState(null);
 
-  //On heart is clicked, updates liked data with true/false
+  // when heart is clicked, updates liked data with true/false
   const updateLikesData = (messageId) => {
     setMessageData(messages => {
       return messages.map(message => {
@@ -51,8 +50,8 @@ const App = () => {
         color={color}
         onSelect={() => updateColorChoice(color, person)}
       />
-    ))
-  }
+    ));
+  };
 
   return (
     <div id="App">
@@ -84,7 +83,7 @@ const App = () => {
       </header>
       <main>
         <ChatLog
-          entries={messageData} 
+          entries={messageData}
           updateLikesData={updateLikesData}
           colorChoice1={colorChoice1}
           colorChoice2={colorChoice2}

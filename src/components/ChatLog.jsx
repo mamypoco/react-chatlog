@@ -15,7 +15,6 @@ const ChatLog = ({ entries, updateLikesData, colorChoice1, colorChoice2, first})
         liked={entry.liked}
         updateLikesData={updateLikesData}
         textColor={textColor}
-
       />
     );
   });
