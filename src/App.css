@@ -28,16 +28,25 @@
 
 #App header section {
   background-color: #e0ffff;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
 #App .widget {
-  display: inline-block;
+  display: flex;
   line-height: 0.5em;
-  border-radius: 10px;
   color: black;
   font-size:0.8em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-inline: 2rem;
+  gap: 1.3rem;
+}
+
+.sender-name {
+  margin-bottom: 0.5rem;
 }
 
 #App #heartWidget {

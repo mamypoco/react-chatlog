@@ -2,19 +2,18 @@ import './ChatEntry.css';
 import TimeStamp from './TimeStamp';
 import PropTypes from 'prop-types';
 
-const ChatEntry = ({ id, sender, body, liked, timeStamp, updateLikesData}) => {
+const ChatEntry = ({ id, sender, body, liked, timeStamp, updateLikesData, textColor}) => {
   const handleLikes = () => {
     updateLikesData(id);
   };
 
-
   return (
-    <section className="chat-entry local">
+    <section className={`chat-entry ${sender === 'Vladimir' ? 'local': 'remote'}`}>
       <h2 className="entry-name">{sender}</h2>
       <section className="entry-bubble">
-        <p>{body}</p>
+        <p style={{color: textColor}}>{body}</p>
         <p className="entry-time"><TimeStamp time={timeStamp}/></p>
-        <button onClick={()=> handleLikes(id)} className="like">{liked ? '❤️' : '🤍'}</button>
+        <button onClick={handleLikes} className="like">{liked ? '❤️' : '🤍'}</button>
       </section>
     </section>
   );

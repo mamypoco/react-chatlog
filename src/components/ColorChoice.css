@@ -1,0 +1,29 @@
+.circle {
+  width: 16px;         
+  height: 16px;        
+  border-radius: 50%;   /* Transforms the square into a circle */
+}
+
+.red {
+  background-color: #b22222
+}
+
+.orange {
+  background-color: #e6ac00
+}
+
+.yellow {
+  background-color: #e6e600
+}
+
+.green {
+  background-color: green
+}
+
+.blue {
+  background-color: blue
+}
+
+.purple {
+  background-color: purple
+}
