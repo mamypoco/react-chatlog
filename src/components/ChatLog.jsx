@@ -1,4 +1,5 @@
 import ChatEntry from './ChatEntry';
+import PropTypes from 'prop-types';
 
 const ChatLog = ({ entries, updateLikesData, colorChoice1, colorChoice2, first}) => {
 
@@ -15,6 +16,7 @@ const ChatLog = ({ entries, updateLikesData, colorChoice1, colorChoice2, first})
         liked={entry.liked}
         updateLikesData={updateLikesData}
         textColor={textColor}
+        first={first}
       />
     );
   });
@@ -23,6 +25,14 @@ const ChatLog = ({ entries, updateLikesData, colorChoice1, colorChoice2, first})
       {chatEntryComponent}
     </>
   );
+};
+
+ChatLog.propTypes = {
+  entries: PropTypes.array.isRequired,
+  updateLikesData: PropTypes.func.isRequired,
+  colorChoice1: PropTypes.string,
+  colorChoice2: PropTypes.string,
+  first: PropTypes.string,
 };
 
 export default ChatLog;
