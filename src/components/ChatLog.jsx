@@ -29,7 +29,7 @@ const ChatLog = ({ entries, updateLikesData, colorChoice1, colorChoice2, first})
 
 ChatLog.propTypes = {
   entries: PropTypes.array.isRequired,
-  updateLikesData: PropTypes.func.isRequired,
+  updateLikesData: PropTypes.func,
   colorChoice1: PropTypes.string,
   colorChoice2: PropTypes.string,
   first: PropTypes.string,
